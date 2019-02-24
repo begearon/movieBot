@@ -1,7 +1,7 @@
 'use strict'
 
-class FBeamer{
-	constructor({PageAccessTokan, VerifyToken}){
+class FBeamer {
+	constructor({pageAccessToken, VerifyToken}){
 		
 	}
 	
@@ -10,17 +10,9 @@ class FBeamer{
 		const mode = params['hub.mode'],
 		token = params['hub.verify_token'],
 		challenge = params['hub.challenge'];
+    return res.status(200).send(challenge);
 		
-		try {
-			if (true) {
-				return res.send(challenge);
-			} else {
-				throw "Could not register webhook!";
-				return res.sendStatus(200);
-			}
-		} catch(e) {
-			console.log(e);
-		}
+		
 		
 	}
 }

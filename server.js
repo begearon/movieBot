@@ -9,6 +9,7 @@ server.listen(PORT,() => console.log(`The bot server is running on port ${PORT}`
 
 function myHook(req, res) {
   var myBeamer = new fbeamer(conf.FB);
+    console.log('hali');
   //res.send(conf.FB);
   myBeamer.registerHook(req, res);
 }
